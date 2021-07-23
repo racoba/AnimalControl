@@ -1,25 +1,39 @@
 import React from 'react'
-import { Grid } from '@material-ui/core'
-import { CaixaTopicos, PaginaContainer } from '../components/styled'
+import { Link } from 'react-router-dom'
+import { CaixaTopicos, PaginaContainer, GridSession } from '../components/styled'
 import ListaAnimais from '../components/listaAnimaisCadastrados'
+import NavBar from '../components/navbar'
+import ListaAdm from '../components/listaADM'
+import AddIcon from '@material-ui/icons/Add';
+import addImage from '../assets/plus.svg'
+import { Button, Grid } from '@material-ui/core'
 
 export default () => {
     return (
         <PaginaContainer>
-            <Grid  direction="column">
-                <CaixaTopicos item>
+            <NavBar />
+            <GridSession id="teste" style={{ marginTop: "1%" }}>
+                <CaixaTopicos >
                     Animais Cadastrados
                 </CaixaTopicos>
-                <Grid item>
-                    <ListaAnimais/>
-                </Grid>
-            </Grid>
+                
+                    <ListaAnimais id="lala" />
+                
+                {/* <Button style={{height:"20%"}}  component={Link} to="/">
+                    <img src={addImage}></img>
+                </Button> */}
+            </GridSession>
 
-            <Grid container style={{alignSelf:"center"}}>
-                <CaixaTopicos item>
+
+            <GridSession>
+                <CaixaTopicos >
                     Administração
                 </CaixaTopicos>
-            </Grid>
+
+                {/* <ListaAdm /> */}
+
+            </GridSession>
+
         </PaginaContainer>
     )
 }

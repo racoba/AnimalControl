@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from '@material-ui/core'
+import { Grid, Button } from '@material-ui/core'
 import styled from 'styled-components'
 
 export const CaixaTopicos = styled(Grid)`
@@ -21,3 +21,13 @@ export const PaginaContainer = styled(Grid)`
     flex-direction: column ;
     
 `
+export const GridSession = styled(Grid)`
+    margin-left: 1%;
+    
+`
+
+export const BotaoNavb = styled(Button)`
+    color:white !important
+    
+`
+

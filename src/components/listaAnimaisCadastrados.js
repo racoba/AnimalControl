@@ -1,24 +1,34 @@
 import React from "react"
-import { Grid, ImageList, ImageListItem, ImageListItemBar, IconButton } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
-import boi from "../assets/boi.jpg"
+import { Grid } from '@material-ui/core'
+
+import boi from "../assets/boi.svg"
+import CardAnimal from "./cardAnimal"
 
 
 
-
-  const imagensData = [
-      {
-        img: boi,
-        title: 'Boi',
-      }
-  ]
+const listaAnimais = [
+  {
+    img: boi,
+    quantM: 10,
+    quantF: 22,
+    tipoAnimal: "Bovino"
+  },
+  {
+    img: boi,
+    quantM: 10,
+    quantF: 22,
+    tipoAnimal: "Bovino"
+  },
+ 
+]
 
 export default () => {
- 
-    return (
-        <Grid style={{heigth:"20px"}}>
-            <img src={boi} alt="miniboi" />
-        </Grid>
-    )
+
+  return (
+    <Grid container direction="row">
+      {listaAnimais.map((card) => (
+        <CardAnimal quantM={card.quantM} quantF={card.quantF} img={card.img} tipoAnimal={card.tipoAnimal}/>
+      ))}
+    </Grid>
+  )
 }
