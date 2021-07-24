@@ -30,4 +30,11 @@ export const BotaoNavb = styled(Button)`
     color:white !important
     
 `
-
+export const BackRodape = styled.footer`
+    background-color: #40C193;
+    width: 100%;
+    height: 100%;
+`
+export const ImageRodapeBoi = styled.img`
+    width: 50%
+`
