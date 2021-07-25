@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Button } from '@material-ui/core'
+import { Grid, Button, Typography } from '@material-ui/core'
 import styled from 'styled-components'
 
 export const CaixaTopicos = styled(Grid)`
@@ -36,5 +36,5 @@ export const BackRodape = styled.footer`
     height: 100%;
 `
 export const ImageRodapeBoi = styled.img`
-    width: 50%
+    width: 50%;
 `
