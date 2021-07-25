@@ -38,3 +38,6 @@ export const BackRodape = styled.footer`
 export const ImageRodapeBoi = styled.img`
     width: 50%;
 `
+export const TituloPagina = styled(Typography)`
+    text-align: center;
+`
