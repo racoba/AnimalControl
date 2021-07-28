@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Button, Typography } from '@material-ui/core'
+import { Grid, Button, Typography, TextField, Container } from '@material-ui/core'
 import styled from 'styled-components'
 
 export const CaixaTopicos = styled(Grid)`
@@ -17,7 +17,6 @@ export const CaixaTopicos = styled(Grid)`
 
 export const PaginaContainer = styled(Grid)`
     display:flex;
-    flex:1;
     flex-direction: column ;
     
 `
@@ -33,11 +32,18 @@ export const BotaoNavb = styled(Button)`
 export const BackRodape = styled.footer`
     background-color: #40C193;
     width: 100%;
-    height: 100%;
+    
 `
 export const ImageRodapeBoi = styled.img`
     width: 50%;
 `
 export const TituloPagina = styled(Typography)`
     text-align: center;
+    height: 20%;
+`
+export const TextFieldVerde = styled(TextField)`
+    border-color: green;
+`
+export const ContainerForm = styled(Container)`
+    padding-top: 4%;
 `

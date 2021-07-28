@@ -34,4 +34,4 @@ const Rodape = () => {
 
 }
 
-export default Rodape
+export default Rodape;
