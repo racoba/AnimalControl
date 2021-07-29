@@ -41,9 +41,6 @@ export const TituloPagina = styled(Typography)`
     text-align: center;
     height: 20%;
 `
-export const TextFieldVerde = styled(TextField)`
-    border-color: green;
-`
 export const ContainerForm = styled(Container)`
     padding-top: 4%;
 `

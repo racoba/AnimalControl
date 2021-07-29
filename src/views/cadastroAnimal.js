@@ -10,8 +10,8 @@ import Rodape from '../components/rodape';
 
 const CadastroAnimal = () =>{
     return(
-        <div style={{height: "auto"}}>
-            <PaginaContainer>
+        
+            <PaginaContainer style={{height: "auto"}}>
                 <NavBar />
                 <ContainerForm maxWidth="sm" component="article">
                     <TituloPagina variant="h2">Cadastro do Animal</TituloPagina>
@@ -19,8 +19,7 @@ const CadastroAnimal = () =>{
                 </ContainerForm>
                 <Rodape />
             </PaginaContainer>
-
-        </div>
+        
 
     );
 }
