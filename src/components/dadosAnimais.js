@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { FormLabel, InputAdornment, RadioGroup, TextField, FormControlLabel, Radio, Button, Grid } from '@material-ui/core';
 import { green } from '@material-ui/core/colors';
-import { Theme, ThemeProvider, createTheme, withStyles } from '@material-ui/core';
+import { ThemeProvider, withStyles } from '@material-ui/core';
 import styled from 'styled-components';
 
 const LabelRadio = styled(FormLabel)`
@@ -16,21 +16,21 @@ const BotaoTextoBranco = withStyles((theme) =>({
         color: "#FFFFFF",
     },
 }))(Button);
-const theme = createTheme({
-    palette: {
-        primary: green,
-    },
-});
-const DadosAnimais = () =>{
-    const [nome, setNome]  = useState("");
-    const [descricao, setDescricao] = useState("");
-    const [peso, setPeso] = useState(0);
-    const [dataDeNascimento, setDataDeNascimento] = useState("");
-    const [sexo, setSexo] = useState("");
+const DadosAnimais = ({theme, aoEnviar, dados}) =>{
+    const [nome, setNome]  = useState(dados.nome);
+    const [descricao, setDescricao] = useState(dados.descricao);
+    const [peso, setPeso] = useState(dados.peso);
+    const [dataDeNascimento, setDataDeNascimento] = useState(dados.dataDeNascimento);
+    const [sexo, setSexo] = useState(dados.sexo);
     return(
-        <form>
+        <form onSubmit={(event) =>{
+            event.preventDefault();
+            aoEnviar({nome, descricao, peso, dataDeNascimento, sexo});
+
+        }}>
             <ThemeProvider theme={theme}>
-                <TextField 
+                <TextField
+                defaultValue={dados.nome}
                 id="nomeAnimal"
                 label="Nome do Animal"
                 name="nome"
@@ -46,6 +46,7 @@ const DadosAnimais = () =>{
 
                 />
                 <TextField
+                defaultValue={dados.descricao}
                 id="descricao"
                 label="Descrição do Animal"
                 name="descricao"
@@ -60,6 +61,7 @@ const DadosAnimais = () =>{
                 }}
                 />
                 <TextField 
+                defaultValue={dados.peso}
                 id="peso"
                 name="peso"
                 type="number"
@@ -75,6 +77,7 @@ const DadosAnimais = () =>{
             
                 <TextField 
                     style={{marginTop: "3%", marginLeft: 50}}
+                    defaultValue={dados.dataDeNascimento}
                     id="dataDeNascimento"
                     name="Data de Nascimento"
                     label="Data de Nascimento"
@@ -86,9 +89,10 @@ const DadosAnimais = () =>{
                         const mes = data.substr(5, 2);
                         const dia = data.substr(8, 2);
                         const Data = dia + "-" + mes + "-" + ano;
-                        setDataDeNascimento(Data);
+                        setDataDeNascimento(data);
                         
                     }}
+                    
                     InputLabelProps={{
                     shrink: true,
                     }}

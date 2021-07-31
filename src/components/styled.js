@@ -19,6 +19,7 @@ export const PaginaContainer = styled(Grid)`
     display:flex;
     flex-direction: column ;
     
+    
 `
 export const GridSession = styled(Grid)`
     margin-left: 1%;

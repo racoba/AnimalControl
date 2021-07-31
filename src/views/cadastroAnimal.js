@@ -8,19 +8,17 @@ import Rodape from '../components/rodape';
 
 
 
-const CadastroAnimal = () =>{
-    return(
-        
-            <PaginaContainer style={{height: "auto"}}>
-                <NavBar />
-                <ContainerForm maxWidth="sm" component="article">
-                    <TituloPagina variant="h2">Cadastro do Animal</TituloPagina>
-                    <FormularioCadatro />
-                </ContainerForm>
-                <Rodape />
-            </PaginaContainer>
-        
+const CadastroAnimal = () => {
+  return (
+    <PaginaContainer style={{ height: "auto" }}>
+      <NavBar />
+      <ContainerForm maxWidth="sm" component="article" style={{ marginBottom: "5%" }}>
+        <TituloPagina variant="h2" style={{ marginBottom: "5%" }}>Cadastro do Animal</TituloPagina>
+        <FormularioCadatro />
+      </ContainerForm>
+      <Rodape />
+    </PaginaContainer>
 
-    );
+  );
 }
 export default CadastroAnimal;
