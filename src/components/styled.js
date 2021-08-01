@@ -17,9 +17,8 @@ export const CaixaTopicos = styled(Grid)`
 
 export const PaginaContainer = styled(Grid)`
     display:flex;
+    flex: 1;
     flex-direction: column ;
-    
-    
 `
 export const GridSession = styled(Grid)`
     margin-left: 1%;
@@ -34,6 +33,7 @@ export const BackRodape = styled.footer`
     background-color: #40C193;
     width: 100%;
     
+    
 `
 export const ImageRodapeBoi = styled.img`
     width: 50%;
@@ -44,4 +44,7 @@ export const TituloPagina = styled(Typography)`
 `
 export const ContainerForm = styled(Container)`
     padding-top: 4%;
+`
+export const EspacoBotao = styled(Grid)`
+margin: 3% 0;  
 `

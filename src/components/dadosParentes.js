@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import '@fontsource/roboto';
 import styled, { ThemeProvider } from 'styled-components';
 import { withStyles } from '@material-ui/styles';
+import { EspacoBotao } from './styled';
 const nomesMae = [
   'Oliver Hansen',
   'Van Henry',
@@ -16,9 +17,7 @@ const nomesPai = [
   'April Tucker',
   'Ralph Hubbard'
 ];
-const EspacoBotao = styled(Grid)`
-  margin: 3% 0;  
-`
+
 const BotaoTextoBranco = withStyles((theme) =>({
     root: {
       color: "#FFFFFF",
