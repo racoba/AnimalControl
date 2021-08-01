@@ -13,17 +13,18 @@ const DadosVacinas = ({theme, voltarEtapa, aoEnviar, dados}) =>{
     const [nomeVacina, setNomeVacina] = useState(dados.nomeVacina);
     const [dataVacina, setDataVacina] = useState(dados.dataVacina); 
     return(
-       <form 
-       onSubmit={
-           (event) =>{
-               event.preventDefault();
-               aoEnviar({nomeVacina, dataVacina});
-           }
-       }
+       <form
+            onSubmit={(event) =>{
+                event.preventDefault();
+                aoEnviar({nomeVacina, dataVacina});
+            }}
+            component={Link}
+            to="/"
        >
            <ThemeProvider theme={theme}>
            <TextField 
            id="vacina"
+           defaultValue={dados.nomeVacina}
            label="Nome da Vacina"
            name="Nome da Vacina"
            variant="outlined"
@@ -43,6 +44,7 @@ const DadosVacinas = ({theme, voltarEtapa, aoEnviar, dados}) =>{
            label="Data de Aplicação"
            margin="normal"
            type="date" 
+           defaultValue={dados.dataVacina}
            color="primary"
            fullWidth
            InputLabelProps={{
@@ -74,8 +76,8 @@ const DadosVacinas = ({theme, voltarEtapa, aoEnviar, dados}) =>{
             variant="contained"
             type="submit"
             color="primary"
-
-            >
+            
+            > 
                 Cadastrar
             </TextoBranco>
            </EspacoBotao>

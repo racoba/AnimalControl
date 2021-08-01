@@ -35,6 +35,7 @@ const DadosAnimais = ({theme, aoEnviar, dados}) =>{
                 label="Nome do Animal"
                 name="nome"
                 type="text"
+                required
                 size="medium"
                 variant="outlined"
                 fullWidth
@@ -64,6 +65,7 @@ const DadosAnimais = ({theme, aoEnviar, dados}) =>{
                 defaultValue={dados.peso}
                 id="peso"
                 name="peso"
+                required
                 type="number"
                 label="Peso do Animal"
                 margin="normal"
@@ -81,6 +83,7 @@ const DadosAnimais = ({theme, aoEnviar, dados}) =>{
                     id="dataDeNascimento"
                     name="Data de Nascimento"
                     label="Data de Nascimento"
+                    required
                     type="date"
                     onChange={(event) =>{
                         console.log(event.target.value);
@@ -98,9 +101,9 @@ const DadosAnimais = ({theme, aoEnviar, dados}) =>{
                     }}
                 />
                 <LabelRadio component="legend">Sexo</LabelRadio>
-                <RadioGroup aria-label="Sexo" name="sexo" onChange={(event) =>{setSexo(event.target.value)}}>
-                        <FormControlLabel value="macho" control={<Radio color="primary"/>} label="Macho" />
-                        <FormControlLabel value="fêmea"  control={<Radio color="primary"/>} label="Fêmea" />
+                <RadioGroup  aria-label="Sexo" name="sexo" onChange={(event) =>{setSexo(event.target.value)}}>
+                        <FormControlLabel value="macho" control={<Radio required color="primary"/>} label="Macho" />
+                        <FormControlLabel value="fêmea"  control={<Radio required color="primary"/>} label="Fêmea" />
                 </RadioGroup>
                 <CentralBotao container justifyContent="center">
                     <BotaoTextoBranco color="primary" size="large" variant="contained" type="submit" >Próximo</BotaoTextoBranco>

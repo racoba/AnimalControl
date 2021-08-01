@@ -24,7 +24,6 @@ const LabelSteps = [
   "Informações do Animal",
   "Selecione os Parentes do Animal",
   "Adicione a Vacina tomada"
-  
 ]
 
 const FormularioCadatro = () => {
@@ -47,7 +46,7 @@ const FormularioCadatro = () => {
     <DadosAnimais theme={theme} aoEnviar={coletarDados} dados={dados}/>,
     <DadosParentes theme={theme} voltarEtapa={voltarEtapa} aoEnviar={coletarDados} dados={dados}/>,
     <DadosVacinas theme={theme} voltarEtapa={voltarEtapa} aoEnviar={coletarDados} dados={dados}/>,
-    <FinalizacaoCadastro theme={theme}/>
+    <FinalizacaoCadastro theme={theme} />
   ];
   return (
     <>

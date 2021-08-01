@@ -16,6 +16,7 @@ const FinalizacaoCadastro = ({theme}) =>{
                 paragraph={true}
                 variant="h4"
                 display="block"
+                style={{textAlign: "center"}}
                 >
                     Obrigado por cadastrar seu Animal no nosso site!
                 </Typography>

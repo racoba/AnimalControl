@@ -42,11 +42,13 @@ const DadosParentes = ({ theme, voltarEtapa, aoEnviar, dados }) => {
         </Typography>
         <TextField
           select
+          
           id="maeaaaaaaaaaaaaaaaaaaaaa"
           label="Selecione a mãe"
+          
           fullWidth
           size="medium"
-          defaultValue=""
+          defaultValue={dados.mae}
           variant="outlined"
           margin="normal"
           SelectProps={{
@@ -71,13 +73,14 @@ const DadosParentes = ({ theme, voltarEtapa, aoEnviar, dados }) => {
         </Typography>
         <TextField
           select
+          
           variant="outlined"
           margin="normal"
           fullWidth
           label="Selecione o pai"
           size="medium"
           id="pai"
-          defaultValue=""
+          defaultValue={dados.pai}
           SelectProps={{
             native: true,
           }}
