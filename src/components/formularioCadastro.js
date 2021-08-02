@@ -39,14 +39,21 @@ const FormularioCadatro = () => {
     setEtapaAtual(etapaAtual - 1);
   }
   function coletarDados(Dados){
+    console.log("chegou aq");
     setDados({...dados, ...Dados});
-    proximaEtapa();
+    console.log("passou so set dados e foi");
+    if(etapaAtual != 2){
+        proximaEtapa();
+    }else{
+        console.log(dados);
+    }
+    
   }
   const DadosFormulario = [
     <DadosAnimais theme={theme} aoEnviar={coletarDados} dados={dados}/>,
     <DadosParentes theme={theme} voltarEtapa={voltarEtapa} aoEnviar={coletarDados} dados={dados}/>,
     <DadosVacinas theme={theme} voltarEtapa={voltarEtapa} aoEnviar={coletarDados} dados={dados}/>,
-    <FinalizacaoCadastro theme={theme} />
+    
   ];
   return (
     <>

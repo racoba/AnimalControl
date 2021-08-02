@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, TextField, ThemeProvider } from '@material-ui/core';
 import { EspacoBotao } from './styled';
 import { withStyles } from '@material-ui/styles';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const TextoBranco = withStyles((theme) =>({
     root: {
@@ -12,14 +12,14 @@ const TextoBranco = withStyles((theme) =>({
 const DadosVacinas = ({theme, voltarEtapa, aoEnviar, dados}) =>{
     const [nomeVacina, setNomeVacina] = useState(dados.nomeVacina);
     const [dataVacina, setDataVacina] = useState(dados.dataVacina); 
+    let history = useHistory();
+
+    function irParaHome(){
+        history.push("/menu-adm");
+    }
     return(
        <form
-            onSubmit={(event) =>{
-                event.preventDefault();
-                aoEnviar({nomeVacina, dataVacina});
-            }}
-            component={Link}
-            to="/"
+            
        >
            <ThemeProvider theme={theme}>
            <TextField 
@@ -76,7 +76,11 @@ const DadosVacinas = ({theme, voltarEtapa, aoEnviar, dados}) =>{
             variant="contained"
             type="submit"
             color="primary"
-            
+            onClick={(event) =>{
+                event.preventDefault();
+                aoEnviar({nomeVacina, dataVacina});
+                irParaHome();
+            }}
             > 
                 Cadastrar
             </TextoBranco>
