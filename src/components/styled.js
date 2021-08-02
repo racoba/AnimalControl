@@ -38,3 +38,16 @@ export const BackRodape = styled.footer`
 export const ImageRodapeBoi = styled.img`
     width: 50%
 `
+export const VacadDesenho = styled.img`
+    width: 30%;
+    max-width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%
+`
+
+export const Botao = styled(Grid)`
+    margin-top: 0.2%;
+    margin-bottom: 3%;
+    display: flex;
+    width: 100%;
+`
