@@ -45,7 +45,7 @@ const FormularioCadatro = () => {
     if(etapaAtual != 2){
         proximaEtapa();
     }else{
-        console.log(dados);
+      console.log(dados);
     }
     
   }
