@@ -39,7 +39,7 @@ export const ImageRodapeBoi = styled.img`
     width: 50%
 `
 export const VacadDesenho = styled.img`
-    width: 30%;
+    width: 20%;
     max-width: 100%;
     margin-top: 0%;
     margin-bottom: 0%
