@@ -7,12 +7,12 @@ const dadosCard = [
   {
     titulo: "Objetivo",
     descricao: "O AnimalControl tem o objetivo de facilitar a administração "+
-    "de fazendo agropecuaria"
+    "da sua fazenda agropecuaria"
   },
   {
     titulo: "Funcionalidade",
     descricao: "Além de administrar," +
-      " mostraremos os dados e reumos mais simplificados para o entendimento " +
+      " mostraremos os dados e resumos mais simplificados para o entendimento " +
       "do que esta acontecendo na sua fazenda, podendo gravar animais, ver "+
       "fichas deles e ver tambem a sua produtividade"
   },
